@@ -39,7 +39,7 @@ Please set PYTHONPATH as needed.
 #### Issues on the input (Confluence) side
 
 * Not really recursive, only supports a page structure with a single Confluence parent page with multiple child pages one level deep.
-* Cells in table heading rows - especially cell 0,0 - are important for parsing. Haven't yet reproduced, but Confluence sometimes goofs things up by changing its markup for table heading rows. if content is missing from the YAML output, check the Confluence markup (open the page in Edit mode then click the source editor control "<>" in the upper right ):
+* Cells in table heading rows - especially cell 0,0 - are important for parsing. Haven't yet reproduced, but Confluence sometimes goofs things up by changing its markup for table heading rows. If content is missing from the YAML output, check the Confluence markup (open the page in Edit mode then click the source editor control "<>" in the upper right ):
 
     ```html
     <!-- This markup with <thead> won't be parsed, though it occasionally appears -->
