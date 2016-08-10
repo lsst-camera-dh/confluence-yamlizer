@@ -1,7 +1,7 @@
 # confluence-yamlizer
 
-Dependencies and Installing
-Hand-rolled libraries (in ./lib)
+h3. Dependencies and Installing
+h4. Hand-rolled libraries (in ./lib)
 
 Please set PYTHONPATH as needed.
 
