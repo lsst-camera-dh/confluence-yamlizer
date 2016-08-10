@@ -41,7 +41,7 @@ Please set PYTHONPATH as needed.
 * Cells in table heading rows - especially cell 0,0 - are important for parsing. Haven't yet reproduced, but Confluence sometimes goofs things up by changing its markup for table heading rows. if content is missing from the YAML output, check the Confluence markup (open the page in Edit mode then click the source editor control "<>" in the upper right ):
 
     ```html
-    <!-- This markup with <thead> won't be parsed, though it occasionally appears
+    <!-- This markup with <thead> won't be parsed, though it occasionally appears -->
     <tbody>
     <thead>
       <th></th>
@@ -49,7 +49,7 @@ Please set PYTHONPATH as needed.
     </thead>
     ...
      
-    <!-- This markup with <tr> WILL be parsed
+    <!-- This markup with <tr> WILL be parsed -->
     <tbody>
     <tr
       <th></th>
