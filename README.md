@@ -58,7 +58,7 @@ Please set PYTHONPATH as needed.
     ...
     ```
 
-* All text in a table cell must have block-level tag (e.g. <p>) applied to it. Beware of any cell which has a mix of bare text elements enclosed by <td> plus additional <p> elements.
+* All text in a table cell must have block-level tag (e.g. `<p>`) applied to it. Beware of any cell which has a mix of bare text elements enclosed by `<td>` plus additional `<p>` elements.
 ** For example, the following will not be parsed correctly...the two trailing <p> elements will be dropped.
     ```html
     <td>
