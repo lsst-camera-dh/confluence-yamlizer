@@ -1,7 +1,7 @@
 # confluence-yamlizer
 
-h3. Dependencies and Installing
-h4. Hand-rolled libraries (in ./lib)
+### Dependencies and Installing
+#### Hand-rolled libraries (in ./lib)
 
 Please set PYTHONPATH as needed.
 
@@ -11,16 +11,16 @@ Please set PYTHONPATH as needed.
     tinylogging
     https
 
-Third party libraries
+#### Third party libraries
 
     lxml 3.3.1
     requests 2.2.1
 
-Directory structure
+#### Directory structure
 
     The main script, confyamlizer.py, assumes ./src and ./config subdirectories.
 
-Page parsing requirements
+### Page parsing requirements
 
     For Prerequisite table (maps to Prerequisites YAML tag), a table with cell 0,0 containing "PrerequisiteType"
         PREPARATION prerequisite type is supported. CONSUMABLE should work. TEST_EQUIPMENT not supported. PROCESS_STEP not supported (and in any case not really supported in eT).
