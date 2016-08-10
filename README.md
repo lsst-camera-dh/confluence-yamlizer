@@ -33,6 +33,7 @@ Please set PYTHONPATH as needed.
 * RelationshipTasks table (i.e., hardware "kitting"/assignment info)
     * But seems straightforward to do
 * Conditional eT sequences
+* A fair amount of other stuff
 
 ### Known Issues
 #### Issues on the input (Confluence) side
