@@ -1,6 +1,8 @@
 ## confluence-yamlizer
 
-This tool was developed for Python 2.7.3, in Cygwin. While it hasn't been run on a linux box, there are no funky Cygwin/Windows hooks in this code.
+This tool was developed for Python 2.7.3, in Cygwin.
+
+Tested on SLAC rhel6-32 (RedHatEnterpriseServer 6.8)
 
 ### Dependencies, Installing
 #### Hand-rolled libraries (in ./lib)
