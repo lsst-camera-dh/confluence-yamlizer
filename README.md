@@ -31,7 +31,7 @@ Please set PYTHONPATH as needed.
 ### eT Features Not Supported
 
 * RelationshipTasks table (i.e., hardware "kitting"/assignment info)
-** But seems straightforward to do
+    ** But seems straightforward to do
 * Conditional eT sequences
 
 ### Known Issues
@@ -59,15 +59,15 @@ Please set PYTHONPATH as needed.
     ```
 
 * All text in a table cell must have block-level tag (e.g. `<p>`) applied to it. Beware of any cell which has a mix of bare text elements enclosed by `<td>` plus additional `<p>` elements.
-** For example, the following will not be parsed correctly...the two trailing `<p>` elements will be dropped.
-    ```html
-    <td>
-    Some bare text....
-    <p>...followed by block level elements</p>
-    <p>...followed by more block level elements</p>
-    </td>
-    The script may be updated for lxml to better parse these blocks.
-    ```
+    ** For example, the following will not be parsed correctly...the two trailing `<p>` elements will be dropped.
+        ```html
+        <td>
+        Some bare text....
+        <p>...followed by block level elements</p>
+        <p>...followed by more block level elements</p>
+        </td>
+        The script may be updated for lxml to better parse these blocks.
+        ```
 
 #### Issues on the output (YAML) side
 
