@@ -5,20 +5,20 @@
 
 Please set PYTHONPATH as needed.
 
-    * confluence/confluence_fetcher_rest
-        Hard-coded Confluence login credentials in here
-    * tinyxml
-    * tinylogging
-    * https
+* confluence/confluence_fetcher_rest
+** Hard-coded Confluence login credentials in here
+* tinyxml
+* tinylogging
+* https
 
 #### Third party libraries
 
-    * lxml 3.3.1
-    * requests 2.2.1
+* lxml 3.3.1
+* requests 2.2.1
 
 #### Directory structure
 
-    The main script, confyamlizer.py, assumes ./src and ./config subdirectories.
+* The main script, confyamlizer.py, assumes ./src and ./config subdirectories.
 
 ### Page parsing requirements
 
@@ -30,9 +30,9 @@ Please set PYTHONPATH as needed.
 
 ### eT Features Not Supported
 
-    RelationshipTasks table (i.e., hardware "kitting"/assignment info)
-        But seems straightforward to do
-    Conditional eT sequences
+* RelationshipTasks table (i.e., hardware "kitting"/assignment info)
+** But seems straightforward to do
+* Conditional eT sequences
 
 ### Known Issues
 #### Issues on the input (Confluence) side
