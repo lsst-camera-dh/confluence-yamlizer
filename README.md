@@ -28,14 +28,14 @@ Please set PYTHONPATH as needed.
         ** (8/9/16) Note: For RequiredInputs:Description and OptionalInputs:Description, the character limit has been raised well over the original 255 characters and tested in Raw/Test. To be rolled out in Prod soon...
     * For content aimed at the YAML Description tag, enclose content in a Confluence "panel" macro.
 
-eT Features Not Supported
+### eT Features Not Supported
 
     RelationshipTasks table (i.e., hardware "kitting"/assignment info)
         But seems straightforward to do
     Conditional eT sequences
 
-Known Issues
-Issues on the input (Confluence) side
+### Known Issues
+#### Issues on the input (Confluence) side
 
     Not really recursive, only supports a page structure with a single Confluence parent page with multiple child pages one level deep.
 
@@ -65,6 +65,6 @@ Issues on the input (Confluence) side
         </td>
         The script may be updated for lxml to better parse these blocks.
 
-Issues on the output (YAML) side
+#### Issues on the output (YAML) side
 
     YAML output contains TAB characters, which are not allowed by eT ingester. Use text editor find/replace to convert TABs to spaces.
