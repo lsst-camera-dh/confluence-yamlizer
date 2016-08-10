@@ -57,7 +57,7 @@ Please set PYTHONPATH as needed.
      
     <!-- This markup with <tr> WILL be parsed -->
     <tbody>
-    <tr
+    <tr>
       <th></th>
       <th></th>
     </tr>
