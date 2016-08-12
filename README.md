@@ -4,13 +4,18 @@ This tool was developed for Python 2.7.3, in Cygwin.
 
 Tested on SLAC rhel6-32 (RedHatEnterpriseServer 6.8, Python 2.7.2)
 
+For usage:
+```bash
+python confyamlizer.py -h
+```
+
 ### Dependencies, Installing
 #### Hand-rolled libraries (in ./lib)
 
 Please set PYTHONPATH as needed.
 
 * confluence/confluence_fetcher_rest
-** Hard-coded Confluence login credentials in here
+  * Hard-coded Confluence login credentials in here
 * tinyxml
 * tinylogging
 * https
@@ -29,15 +34,16 @@ Please set PYTHONPATH as needed.
 * For Prerequisite table (maps to Prerequisites YAML tag), a table with cell 0,0 containing "PrerequisiteType"
    * PREPARATION prerequisite type is supported. CONSUMABLE should work. TEST_EQUIPMENT not supported. PROCESS_STEP not supported (and in any case not really supported in eT).
 * For Results/Instructions and Results blocks (maps to RequiredInputs and OptionalInputs), one or more tables with cell 0,0 beginning "Label"
-   * (8/9/16) Note: For RequiredInputs:Description and OptionalInputs:Description, the character limit has been raised well over the original 255 characters and tested in Raw/Test. To be rolled out in Prod soon...
+   * (8/12/16) Note: For RequiredInputs:Description and OptionalInputs:Description, the character limit has been raised from 255 characters to some large (multi-kilobyte) size.
 * For content aimed at the YAML Description tag, enclose in a Confluence "panel" macro.
 
-### eT Features Not Supported
+### eT Features Not Supported and Other Stuff
 
-* RelationshipTasks table (i.e., hardware "kitting"/assignment info)
+* (eT) RelationshipTasks table (i.e., hardware "kitting"/assignment info)
     * But seems straightforward to do
-* Conditional eT sequences
-* A fair amount of other stuff
+* (eT) Conditional eT sequences
+* (eT) A fair amount of other stuff
+* (Other) High priority to add. Image URLs will have to be set by hand in the YAML. Plan to let the user add some URL prefix to ./config/cyml_config.py and have the script append the image filename to it in the final output.
 
 ### Known Issues
 #### Issues on the input (Confluence) side
