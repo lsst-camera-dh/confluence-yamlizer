@@ -4,6 +4,7 @@ This tool was developed for Python 2.7.3, in Cygwin.
 
 Tested on SLAC rhel6-32 (RedHatEnterpriseServer 6.8, Python 2.7.2)
 
+For usage:
 ```bash
 python confyamlizer -h
 ```
