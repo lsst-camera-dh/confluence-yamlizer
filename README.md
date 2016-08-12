@@ -37,7 +37,7 @@ Please set PYTHONPATH as needed.
    * (8/12/16) Note: For RequiredInputs:Description and OptionalInputs:Description, the character limit has been raised from 255 characters to some large (multi-kilobyte) size.
 * For content aimed at the YAML Description tag, enclose in a Confluence "panel" macro.
 
-### eT Features Not Supported and Other Issues
+### eT Features Not Supported and Other Stuff
 
 * (eT) RelationshipTasks table (i.e., hardware "kitting"/assignment info)
     * But seems straightforward to do
