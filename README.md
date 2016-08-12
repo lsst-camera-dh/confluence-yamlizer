@@ -37,12 +37,13 @@ Please set PYTHONPATH as needed.
    * (8/12/16) Note: For RequiredInputs:Description and OptionalInputs:Description, the character limit has been raised from 255 characters to some large (multi-kilobyte) size.
 * For content aimed at the YAML Description tag, enclose in a Confluence "panel" macro.
 
-### eT Features Not Supported
+### eT Features Not Supported and Other Issues
 
-* RelationshipTasks table (i.e., hardware "kitting"/assignment info)
+* (eT) RelationshipTasks table (i.e., hardware "kitting"/assignment info)
     * But seems straightforward to do
-* Conditional eT sequences
-* A fair amount of other stuff
+* (eT) Conditional eT sequences
+* (eT) A fair amount of other stuff
+* (Other) High priority to add. Image URLs will have to be set by hand in the YAML. Plan to let the user add some URL prefix to ./config/cyml_config.py and have the script append the image filename to it in the final output.
 
 ### Known Issues
 #### Issues on the input (Confluence) side
