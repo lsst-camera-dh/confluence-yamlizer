@@ -6,7 +6,7 @@ Tested on SLAC rhel6-32 (RedHatEnterpriseServer 6.8, Python 2.7.2)
 
 For usage:
 ```bash
-python confyamlizer -h
+python confyamlizer.py -h
 ```
 
 ### Dependencies, Installing
