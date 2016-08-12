@@ -13,6 +13,8 @@ class Application:
             # Get the Name, Desciption, other content from the top-level node
             print "Name: " + "\"" + self.args.nameprefix + "\""
             print "\n"
+            print "Subsystem: "  + "\"" + self.args.subsystem + "\""
+            print "\n"
             self.etpp.shortdescription()
             print "\n"
             self.etpp.hardwareGroup()

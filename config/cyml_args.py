@@ -26,7 +26,7 @@ cymlparser.add_argument("--space", required=True,
 cymlparser.add_argument("--nameprefix", required=True, 
                    help='Process step name, used as is for the Name of the top-level traveler step (e.g., "REB-ASY"), then used as a prefix to construct Name fields for child steps (e.g., "REB-ASY_step1").')
 
-#lcaparser.add_argument("--simplename", action="store_true", default=False, 
-#                   help='Used with the "download" command. Indicates downloaded files should named with the base handle + document number scheme (e.g., "LCA-39.pdf").')
+cymlparser.add_argument("--subsystem", required=True, 
+                   help='Subsystem to which the traveler belongs.')
 
 
