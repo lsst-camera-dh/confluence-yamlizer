@@ -10,7 +10,7 @@ Tested on SLAC rhel6-32 (RedHatEnterpriseServer 6.8, Python 2.7.2)
 Please set PYTHONPATH as needed.
 
 * confluence/confluence_fetcher_rest
-** Hard-coded Confluence login credentials in here
+  * Hard-coded Confluence login credentials in here
 * tinyxml
 * tinylogging
 * https
