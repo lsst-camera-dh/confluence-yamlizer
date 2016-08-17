@@ -43,7 +43,7 @@ Please set PYTHONPATH as needed.
     * But seems straightforward to do
 * (eT) Conditional eT sequences
 * (eT) A fair amount of other stuff
-* (Other) High priority to add. Image URLs will have to be set by hand in the YAML. Plan to let the user add some URL prefix to ./config/cyml_config.py and have the script append the image filename to it in the final output.
+* (Other) High priority to add. To account for the fact theat images will have to be moved to some location that the eT server is aware of, image URLs will have to be set by hand in the YAML. Plan to let the user add some URL prefix to ./config/cyml_config.py and have the script append the image filename to it in the final output.
 
 ### Known Issues
 #### Issues on the input (Confluence) side
