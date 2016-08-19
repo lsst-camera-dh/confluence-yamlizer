@@ -93,24 +93,20 @@ class eTPageParser:
 
         def _extractColumnContents(self, anIndex, aColumn, inputtype, tagset):
 
-                # Horrible hack
+                # Horrible index hack
 
                 if anIndex < 3:
-                    if aColumn.text != None:
-                        # Let's escape all kinds of nasty characters that choke the eT ingester by putting quotes around the values
-                        self.travdict[inputtype].append("\t" + tagset[anIndex] + "\"" + aColumn.text.encode("UTF-8") + "\"")
-                    else:
-                        # And escape here as well with some fiddly string building
-                        if len(aColumn) > 0:
             
-                            s = ""
-                            s += "\t" + tagset[anIndex] + "\""
-                            for inneritem in aColumn:
-                                s += self._fixParsedSource(self.pather.tostring(inneritem))
-                            s += "\""
+                    cellcontents = ""
 
-                            #fixnbsp = self._fixParsedSource(s)
-                            self.travdict[inputtype].append(s)  
+                    if aColumn.text != None:
+                        cellcontents = aColumn.text + "".join(map(self.pather.tostring, aColumn)).strip()
+                    else:
+                        cellcontents = "".join(map(self.pather.tostring, aColumn)).strip()
+
+                    cleanedcellcontents = self._fixParsedSource(cellcontents)
+
+                    self.travdict[inputtype].append("\t" + tagset[anIndex] + "\"" + cleanedcellcontents.encode("UTF-8") + "\"")
 
                 return
 
@@ -148,6 +144,8 @@ class eTPageParser:
                 for idx, column in enumerate(columns):
 
                     if (re.search("N", self.pather.tostring(columns[3]))) != None:
+
+                        #print self.pather.tostring(column)
 
                         self._extractColumnContents(idx, column, "required", self.reqinputstagset)
 
