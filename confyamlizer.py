@@ -23,6 +23,8 @@ class Application:
             print "\n"
             self.etpp.prerequisites()
             print "\n"
+            self.etpp.hardwarerelationshiptasks()
+            print "\n"
             self.etpp.inputs()
             print "Version: next"
             print "\n"
@@ -42,6 +44,8 @@ class Application:
                     self.etpp.stepDescriptions()
                     print "\n"
                     self.etpp.prerequisites()
+                    print "\n"
+                    self.etpp.hardwarerelationshiptasks()
                     print "\n"
                     self.etpp.inputs()
 

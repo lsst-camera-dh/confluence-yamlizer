@@ -28,13 +28,15 @@ class eTPageParser:
                 self.reqinputstagset = ["Label: ", "Description: ", "InputSemantics: ", "Now: "]
                 self.prerequisitestagset = ["PrerequisiteType: ", "Name: ", "Description: "]
                 self.hardwaregrouptagset = ["HardwareGroup: "]
+                self.hardwarerelationshiptagset = ["RelationshipName: ", "RelationshipAction: "]
 
                 self.requiredinputs = []
                 self.optionalinputs = []
                 self.prereqs = []
+                self.hardwarerelationshiptaskslist = []
                 self.stepdescription = []
                 self.hardwaregroup = []
-                self.travdict = {"hardwaregroup":self.hardwaregroup, "stepdescription":self.stepdescription, "title":None, "prereqs":self.prereqs, "required":self.requiredinputs, "optional":self.optionalinputs} 
+                self.travdict = {"hardwaregroup":self.hardwaregroup, "stepdescription":self.stepdescription, "title":None, "prereqs":self.prereqs, "required":self.requiredinputs, "optional":self.optionalinputs, "hardwarerelationships":self.hardwarerelationshiptaskslist} 
 
                 self.stepChildren = None
 	
@@ -93,11 +95,13 @@ class eTPageParser:
 
         def _extractColumnContents(self, anIndex, aColumn, inputtype, tagset):
 
-                # Horrible index hack
+                # Horrible anIndex hack
 
                 if anIndex < 3:
             
                     cellcontents = ""
+
+                    #print "FIRST TRY: " + aColumn.text + ''.join(map(self.pather.tostring, aColumn)).strip()
 
                     if aColumn.text != None:
                         cellcontents = aColumn.text + "".join(map(self.pather.tostring, aColumn)).strip()
@@ -170,6 +174,19 @@ class eTPageParser:
 
             #print "Hub..." + str(self.prerequisites)
 
+        def _parseRelationshipTasks(self, rows):
+
+            for row in rows:
+
+                columns = self.pather.xpath("td", row)
+
+                for idx, column in enumerate(columns):
+
+                    #print self.pather.tostring(column)
+
+                    if idx == 0 or idx == 1:
+                        self._extractColumnContents(idx, column, "hardwarerelationships", self.hardwarerelationshiptagset)
+
 	def _parseTables(self):
 
             #print self.linkPageTree
@@ -196,10 +213,13 @@ class eTPageParser:
 
                 if (re.match("HardwareGroup", item.text) != None):
 
-                    #print "Hey prereqs!"
-                   
                     rows = self._getRows(item)
                     self._parseHardwareGroup(rows)
+
+                if (re.match("RelationshipName", item.text) != None):
+
+                    rows = self._getRows(item)
+                    self._parseRelationshipTasks(rows)
 
         def _getRows(self, item):
 
@@ -301,6 +321,20 @@ class eTPageParser:
                             print "-"
                         print item
 
+            else:
+
+                pass
+
+        def hardwarerelationshiptasks(self):
+
+            if self.travdict["hardwarerelationships"]:
+
+                print "RelationshipTasks:"
+
+                for idx, item in enumerate(self.travdict["hardwarerelationships"]):
+                    if (idx%2) == 0:
+                        print "-"
+                    print item
             else:
 
                 pass
