@@ -36,6 +36,7 @@ Please set PYTHONPATH as needed.
 * For Results/Instructions blocks (maps to RequiredInputs and OptionalInputs), one or more tables with cell 0,0 beginning "Label"
    * (8/12/16) Note: For RequiredInputs:Description and OptionalInputs:Description, the character limit has been raised from 255 characters to some large (multi-kilobyte) size.
 * For content aimed at the YAML Description tag, enclose in a Confluence "panel" macro.
+* For RelationshipTasks, one or more tables with cell 0,0 beginning with "RelationshipName" and the next column containing the RelationshipAction.
 
 ### eT Features Not Supported and Other Stuff
 
