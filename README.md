@@ -49,6 +49,7 @@ Please set PYTHONPATH as needed.
 
 * Not really recursive, only supports a page structure with a single Confluence parent page with multiple child pages one level deep.
 * Parsing of IMG tags created by the Confluence editor may be fairly wonky. 
+* Watch for tables with sorts applied. Open the markup editor and look for spans of class "table-sort-header" and remove.
 * Cells in table heading rows - especially cell 0,0 - are important for parsing. Haven't yet reproduced, but Confluence sometimes goofs things up by changing its markup for table heading rows. If content is missing from the YAML output, check the Confluence markup (open the page in Edit mode then click the source editor control "<>" in the upper right ):
 
     ```html
